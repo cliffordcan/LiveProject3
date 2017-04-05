@@ -1,0 +1,7 @@
+/* YOUR CUSTOM STYLES */
+
+@font-face{
+    font-family: "Lorem Ipsum";
+    src: url('Lorem Ipsum.ttf'),
+    url('Lorem Ipsum.eot'); /* IE */
+}
