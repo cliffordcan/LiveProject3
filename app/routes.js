@@ -1,9 +1,26 @@
 var User       = require('../app/models/user');
 var Friend       = require('../app/models/friend');
 async = require("async");
+var sql = require("MSSQL");
 var path = require('path'),
     fs = require('fs');
 module.exports = function(app, passport,server) {
+	app.post('/Subscriber', function(request, response)
+	{
+		//THIS IS STUFF I CHANGED. ALL OF THIS MIGHT BE WRONG. -REIS
+		var config = dbconfig 
+		{
+			user: 'JESSICA\Reis',
+			server: 'JESSICA\SQLEXPRESS',
+			database: 'Subscriber Database',
+		}
+		var dbconnection
+		{
+			connection: Server=localhost,1433;Database=database;User Id=username;Password=password;Encrypt=true
+			Driver=msnodesqlv8;Server=(local)\INSTANCE;Database=database;UID=DOMAIN\username;PWD=password;Encrypt=true
+		}
+		//STUFF I CHANGED ENDS HERE. -REIS
+    }
 	app.get('/', function(request, response) {
 		response.render('index.html');
 	});
