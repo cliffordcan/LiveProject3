@@ -12,6 +12,9 @@ module.exports = function(app, passport,server) {
 			user : request.user
 		});
 	});
+	app.get('/about', function(request, response) {             //Added About page route
+		response.render('about.html');
+	});
 	app.get('/index', function(request, response) {
 		response.render('index.html');
 	});
