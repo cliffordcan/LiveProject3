@@ -51,7 +51,7 @@
 		font-family:Lorem Ipsum;
 		}
     </style>
-
+	 <link href="css/style.css" rel="stylesheet">
 </head>
 
 <body background = "./images/backdrop.jpg">
@@ -111,7 +111,50 @@
                         <p>Under Construction</p>
                         <hr>
                         <p>Sign up for our Email Newsletter:</p>
-                        <a target="_blank" href="http://google.com/" class="btn btn-mdb btn-stc" rel="nofollow">Sign-Up <i class="fa fa-book right"></i></a>
+                        <!--<a target="_blank"  href="http://google.com/" class="btn btn-mdb btn-stc" rel="nofollow">Sign-Up <i class="fa fa-book right"></i></a>-->
+						<!--MODAL FOR USERNAME, ID-->
+						<button id="myBtn">Sign-Up</button>
+						
+						<!-- The Modal -->
+						<div id="myModal" class="modal">
+						
+							<!-- Modal content -->
+							<div class="modal-content">
+								<div class="modal-header">
+								<span class="close">&times;</span>
+								<h2>Modal Header</h2>
+							</div>
+							<div class="modal-body">
+								<form action="/action_page.php">
+								<!-- SIGNUP FORM------------------->
+								<div class="container">
+									<label><b>Email</b></label>
+									<input type="text" placeholder="Enter Email" name="email" required>
+
+									<label><b>Password</b></label>
+									<input type="password" placeholder="Enter Password" name="psw" required>
+
+									<label><b>Repeat Password</b></label>
+									<input type="password" placeholder="Repeat Password" name="psw-repeat" required>
+									<input type="checkbox" checked="checked"> Remember me
+									<p>By creating an account you agree to our <a href="#">Terms & Privacy</a>.</p>
+
+									<div class="clearfix">
+									<button type="button"  class="cancelbtn">Cancel</button>
+									<button type="submit" class="signupbtn">Sign Up</button>
+								</div>
+							</div>
+							</form>
+							</div>
+							<div class="modal-footer">
+								<h3>Modal Footer</h3>
+							</div>
+							</div>
+							
+							
+						</div>
+						
+						
                         
                     </div>
                 </div>
@@ -323,6 +366,9 @@
 
     <!-- MDB core JavaScript -->
     <script type="text/javascript" src="js/mdb.min.js"></script>
+	
+	  <!-- Reis' New JS File -->
+    <script type="text/javascript" src="js/additionaljs.js"></script>
 
     <script>
     new WOW().init();
