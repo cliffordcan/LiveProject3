@@ -1,4 +1,36 @@
-/* YOUR CUSTOM STYLES */
+
+
+main {
+    padding-top: 3rem;
+    padding-bottom: 2rem;
+}
+		
+.extra-margins {
+    margin-top: 1rem;
+    margin-bottom: 2.5rem;
+}
+        
+.jumbotron {
+    text-align: center;
+	background-image: url(../images/smoke.jpg);     		/*Placeholder Image*/
+    text-shadow: black 0.5em 0.5em 0.5em;
+            
+}
+          
+.navbar {
+    background-color: #3b295a;
+}
+        
+footer.page-footer {
+    background-color: #3b295a;
+    margin-top: 2rem;
+}
+        
+*{
+font-family:Lorem Ipsum;
+}
+
+
 
 /*THE FOLLOWING CSS IS REGARDING THE SIGNUP FORM------------------------------------------------------*/
 /* The Modal (background) */
