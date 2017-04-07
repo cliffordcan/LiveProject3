@@ -13,11 +13,11 @@ module.exports = function(app, passport,server) {
 		});
 	});
 	//app.get('/about', function (req, res) {                     //Added About page route 2
-		res.send('about.html')
-	})//
+		//res.send('about.html')
+	//})
 	//app.get('/about', function(request, response) {             //Added About page route 1
-		response.render('about.html');
-	});//
+		//response.render('about.html');
+	//}); 
 	app.get('/index', function(request, response) {
 		response.render('index.html');
 	});
