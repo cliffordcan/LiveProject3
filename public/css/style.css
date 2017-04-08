@@ -10,13 +10,45 @@ main {
     margin-bottom: 2.5rem;
 }
         
+
 .jumbotron {
+    
+    posistion:relative;
+    z-index: 2;
+    box-shadow: 0 10px 16px -6px black;
     text-align: center;
-	background-image: url(../images/smoke.jpg);     		/*Placeholder Image*/
+    background-image: url(../images/smoke.jpg);     		/*Placeholder Image*/
     text-shadow: black 0.5em 0.5em 0.5em;
-            
 }
-          
+
+
+h1 {
+  font-weight: bold;
+  color: #fff;
+  font-size: 32px
+  
+}
+
+h2 {
+  font-weight: bold;
+  color: #fff;
+  font-size: 20px
+}
+
+b {
+  font-size: 20px
+}
+
+button {
+   background-color: #000000;
+        color: #FFFFFF;
+        padding: 8px;
+        border-radius: 8px;
+        -moz-border-radius: 8px;
+        -webkit-border-radius: 8px;
+        margin:8px
+}
+                      
 .navbar {
     background-color: #3b295a;
 }
@@ -29,6 +61,7 @@ footer.page-footer {
 *{
 font-family:Lorem Ipsum;
 }
+
 
 
 
