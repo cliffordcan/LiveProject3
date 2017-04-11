@@ -18,14 +18,23 @@ module.exports = function(app, passport,server) {
 			port: '1433'
 		};
 		//STUFF I CHANGED ENDS HERE. -REIS
-		var conn = new sql.connection(dbconfig);
-		var req = new sql.request(conn);
-		conn.connect(function(err)
-		{
-			
-		});
+	//	var conn = new sql.connection(dbconfig);
+	//	var req = new sql.request(conn);
+	//	conn.connect(function(err)
 		
-		response.redirect('index.html;');;
+		//New stuff
+	//	var request = new sql.Request(conn);
+	//	request.input('email', sql.VarChar, req.params.email);
+	//	request.input('userName', sql.varChar, req.params.name);
+	//	var sqlquery = "SELECT * FROM userDatabase WHERE email =@email AND name =@userName";
+	//	request.query(sqlquery, function (err, recordset)
+	//	{
+	//		if (err)
+	//			res.json(err)
+	//		else
+	//			res.json(recordset);
+	//	}
+		//response.redirect('index.html;');;
     });
 	
 	app.get('/', function(request, response) {
