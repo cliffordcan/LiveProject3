@@ -1,3 +1,4 @@
+var SQL = require('MSSQL');
 var User       = require('../app/models/user');
 var Friend       = require('../app/models/friend');
 async = require("async");
@@ -8,19 +9,24 @@ module.exports = function(app, passport,server) {
 	app.post('/Subscriber', function(request, response)
 	{
 		//THIS IS STUFF I CHANGED. ALL OF THIS MIGHT BE WRONG. -REIS
-		var config = dbconfig 
+		var dbconfig =
 		{
 			user: 'liveproject3db',
 			server: 'mssql5.gear.host',
 			database: 'liveproject3db',
-		}
-		var dbconnection
-		{
-			connection: Server=localhost,1433;Database=database;User Id=username;Password=password;Encrypt=true
-			Driver=msnodesqlv8;Server=(local)\INSTANCE;Database=database;UID=DOMAIN\username;PWD=password;Encrypt=true
-		}
+			password: 'Tf7j!!K80BwY',
+			port: '1433'
+		};
 		//STUFF I CHANGED ENDS HERE. -REIS
-    }
+		var conn = new sql.connection(dbconfig);
+		var req = new sql.request(conn);
+		conn.connect(function(err)
+		{
+			
+		});
+		
+		response.redirect('index.html;');;
+    });
 	
 	app.get('/', function(request, response) {
 		response.render('index.html');
