@@ -20,6 +20,7 @@
     <link href="css/mdb.min.css" rel="stylesheet">
 
 	<link href="css/style.css" rel="stylesheet">
+	
 
 </head>
 
@@ -62,6 +63,7 @@
             </div>
         </nav>
 	    <!--/.Navbar-->
+}
 
     </header>
 
@@ -92,7 +94,7 @@
 								<h2>Sign Up</h2>
 							</div>
 							<div class="modal-body">
-								<form action="/action_page.php">
+							<form action="/action_page.php" onsubmit="return mailMe(this.form)">
 								<!-- SIGNUP FORM------------------->
 								<div class="container">
 									<label><b>Email</b></label>
