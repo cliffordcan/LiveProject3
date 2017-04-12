@@ -1,15 +1,26 @@
-var SQL = require('MSSQL');
-var User       = require('../app/models/user');
-var Friend       = require('../app/models/friend');
-async = require("async");
-var path = require('path'),
-    fs = require('fs');
+
+
 module.exports = function(app, passport,server) {
 	
-	app.post('/Subscriber', function(request, response)
-	{
-		
-		var dbconfig =
+	//This is the temp location for variables
+	var sql = require('mssql');
+	var User       = require('../app/models/user');
+	var Friend       = require('../app/models/friend');
+	async = require("async");
+	var path = require('path'),
+	fs = require('fs');
+	//var app = express();
+	//var bodyParser = require('body-parser')
+	//app.use (bodyParser());
+	//app.use(bodyParser.urlencoded({extended:true}));
+
+
+
+
+	//var urlencodedParser = bodyParser.urlencoded ({ extended: true })
+	
+	
+	var dbconfig =
 		{
 			user: 'liveproject3db',
 			server: 'mssql5.gear.host',
@@ -17,9 +28,21 @@ module.exports = function(app, passport,server) {
 			password: 'Tf7j!!K80BwY',
 			port: '1433'
 		};
+	
+	
+	app.post('/Subscriber', function(request, response)
+	{
+		var conn = new sql.Connection(dbconfig);
+		var req = new sql.Request(conn);
 		
-		var conn = new sql.connection(dbconfig);
-		var req = new sql.request(conn);
+		var userName = request.body.Name;	
+		console.log(userName);
+		var userEmail = request.body.Email;
+		console.log(userEmail);
+		
+		
+	
+		
 		conn.connect(function(err)
 		{
 			if(err)
@@ -27,26 +50,34 @@ module.exports = function(app, passport,server) {
 				console.log(err);
 				return;
 			}
-			//req.query('INSERT INTO userDatabase (userName, userEmail)' VALUES "Name", "Email");
-		
-		});
-		
-		
-		/*
-		//New stuff
-		request.input('email', sql.VarChar, req.params.email);
-		request.input('userName', sql.varChar, req.params.name);
-		var sqlquery = "SELECT * FROM userDatabase WHERE email =@email AND name =@userName";
-		request.query(sqlquery, function (err, recordset)
-		{
-			if (err)
-				res.json(err)
 			else
-				res.json(recordset);
-		}
-		*/
+			{
+				console.log('worked');
+			}
+			req.query("INSERT INTO userDatabase (userName, userEmail) VALUES ('" + userName +"', '"+ userEmail +"')", function (err, recordset)
+			{
+				if (err)
+				{
+					console.log(err);
+				}
+				else
+				{
+					console.log(recordset);
+				}
+				conn.close();
+			});
+		});
+	
 		response.redirect('/');
     });
+	
+	
+	
+	
+	
+	
+	
+	
 	
 	app.get('/', function(request, response) {
 		response.render('index.html');
