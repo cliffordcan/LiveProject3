@@ -9,7 +9,7 @@
     "connect-flash": "0.1.1",
     "ejs": "0.8.5",
     "express": "3.4.8",
-    "mssql": "^4.0.1",
+    "mssql": "^3.3.0",
     "now": ">=0.0.1",
     "passport": "0.2.0",
     "passport-local": "0.1.6"
